@@ -1,0 +1,100 @@
+/*------------HEADER---------------*/
+
+header {
+	background-color: $primaryColor;
+	color: $secondaryColor;
+	padding: 1rem $gutter;
+	h1 {
+		font-size: 2rem;
+		font-weight: $normalWeight;
+	}
+	h2 {
+		font-size: 1.12rem;
+		font-weight: $normalWeight;
+	} //end h2 rules
+	/*--------HEADER SOCIAL ICONS-----------*/
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+	}
+	ul.social li {
+		list-style-type: none;
+
+	}
+	ul.social li a {
+		font-size: 1.8rem;
+		padding-left: .5rem;
+		color: #fff;
+	}
+	ul.social li a:hover {
+		color: $secondaryColor;
+	}
+
+} //end header
+/*-------------MAIN--------------*/
+
+main {
+	max-width: 60rem;
+	min-height: 20rem;
+	h1 {
+		font-size: 2rem;
+		margin: 1.5rem 0 .5rem 0;
+		color: $primaryColor;
+	} //end h1
+	h2 {
+		font-size: 1.5rem;
+		margin: 1rem 0 .5rem 0;
+		color: $primaryColor;
+	} //end h2
+	article {
+		margin: .5rem $gutter;
+	}
+	figure {
+		float: left;
+	}
+	figure img {
+		width: 100%;
+	}
+
+	figure.ex1 {
+		clip-path: circle(100% at 0% 0%);
+		shape-outside: circle(100% at 0% 0%);
+		margin: .5rem;
+	}
+	figure.ex2 {
+		clip-path: polygon(0 0, 100% 0, 0 100%);
+		shape-outside: polygon(0 0, 100% 0, 0 100%);
+		margin: .5rem;
+	}
+	figure.ex3 img {
+		clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	}
+	figure.ex4 img {
+		clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	}
+	figure.ex5 img {}
+
+	/*---------COLUMN LAYOUT---------*/
+	.row {
+		clear: both;
+	}
+	.column {
+		padding: 0 $gutter;
+	}
+	@for $i from 1 through 12 {
+		$w: ($i / 12) * 100%;
+		.small-#{$i} {
+			width: $w;
+			float: left;
+		}
+	}
+
+} //end main
+/*---------------FOOTER-------------*/
+
+footer {
+	width: 100%;
+	text-align: center;
+}
