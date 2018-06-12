@@ -12,6 +12,7 @@ header {
 		font-size: 1.12rem;
 		font-weight: $normalWeight;
 	} //end h2 rules
+    
 	/*--------HEADER SOCIAL ICONS-----------*/
 	ul {
 		display: flex;
@@ -33,6 +34,41 @@ header {
 	}
 
 } //end header
+
+/*------------------ NAV ----------------*/
+
+nav {
+	ul {
+		display: flex;
+        justify-content: space-between;
+	}
+	background-color: $secondaryColor;
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+	ul li {
+		width: 20%;
+		border-right: 1px solid rgba(0, 0, 0, .3);
+        text-decoration: none;
+        list-style-type: none;
+        
+	} //end li
+	
+	ul li a {
+		
+		text-align: center;
+		font-weight: $boldWeight;
+		padding: .5rem 0;
+		color: $primaryColor;
+		
+	} //end anchors
+	ul li.active a {
+		background-color: darken($secondaryColor, 10%);
+	} //end active
+	ul li a:hover {
+		color: $secondaryColor;
+		background-color: $primaryColor;
+	} //end hover
+} //end nav
+
 /*-------------MAIN--------------*/
 
 main {
@@ -60,19 +96,25 @@ main {
 
 	figure.ex1 {
 		clip-path: circle(100% at 0% 0%);
+        -webkit-clip-path: circle(100% at 0% 0%);
 		shape-outside: circle(100% at 0% 0%);
 		margin: .5rem;
 	}
 	figure.ex2 {
-		clip-path: polygon(0 0, 100% 0, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+		-webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
 		shape-outside: polygon(0 0, 100% 0, 0 100%);
 		margin: .5rem;
 	}
-	figure.ex3 img {
-		clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	figure.ex3 {
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+		-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 	}
-	figure.ex4 img {
-		clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	figure.ex4 {
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+		-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        shape-outside: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	}
 	figure.ex5 img {}
 
